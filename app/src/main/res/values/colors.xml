@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="White">#FFFFFF</color>
+
+    // Main Colours in my Colour Theme
+    <color name="MainColorOne">#E9E2D2</color>
+    <color name="MainColorTwo">#6C6C6C</color>
+    <color name="MainColorThree">#2E2E2E</color>
+    <color name="MainColorFour">#5f5f5f</color>
+
+    <color name="ColorAccentOne">#FFCE54</color>
+    <color name="ColorAccentTwo">#3BAFDA</color>
+    <color name="ColorAccentThree">#2574A9</color>
+    <color name="ColorAccentFour">#F67280</color>
+    <color name="ColorAccentFive">#DA4453</color>
+    <color name="ColorAccentSix">#ffc73b</color>
+    <color name="ColorAccentSeven">#ffbf21</color>
+
+
+
+</resources>

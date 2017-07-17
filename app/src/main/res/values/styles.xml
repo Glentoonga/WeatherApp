@@ -1,0 +1,24 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">#ffffff</item>
+    </style>
+
+    <style name="Autocomplete"> parent="Widget.AppCompat.Light.AutoCompleteTextView"
+        <item name="android:background">@color/ColorAccentOne</item>
+        <item name="android:colorControlHighlight">@color/MainColorTwo</item>
+        <!--Colour of the Underline in an unfocused state-->
+        <item name="android:colorControlNormal">#3BAFDA</item>
+        <!--Colour of the Underline in a focused state-->
+        <item name="android:colorControlActivated">#ffffff</item>
+    </style>
+
+    <style name="counterText"></style>
+
+    <style name="counterOverride"></style>
+
+</resources>

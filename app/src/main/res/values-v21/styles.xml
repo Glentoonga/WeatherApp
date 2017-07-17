@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Autocomplete"> parent="Widget.AppCompat.Light.AutoCompleteTextView"
+        <item name="android:background">@color/ColorAccentOne</item>
+        <item name="android:colorControlHighlight">@color/MainColorTwo</item>
+        <!--Colour of the Underline in an unfocused state-->
+        <item name="android:colorControlNormal">@color/MainColorThree</item>
+        <!--Colour of the Underline in a focused state-->
+        <item name="android:colorControlActivated">#ffffff</item>
+    </style>
+</resources>

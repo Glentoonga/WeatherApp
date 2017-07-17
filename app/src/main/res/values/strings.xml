@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="action_add">add</string>
+    <string name="action_favourite">favourite</string>
+    <string name="action_search">search</string>
+    <string name="search_hint">Search: London</string>
+    <string name="error_timeout">You have encountered a Timeout Error</string>
+    <string name="error_parse">You have encountered a Parsing Error</string>
+    <string name="error_connection">You have encountered a Connection issue</string>
+
+</resources>
