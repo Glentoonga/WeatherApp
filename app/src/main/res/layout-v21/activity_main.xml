@@ -17,12 +17,12 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:background="@color/ColorAccentSeven"
-            android:paddingLeft="5dp"
-            android:paddingRight="5dp"
             android:elevation="4dp"
             android:gravity="center_vertical"
             android:maxButtonHeight="?attr/actionBarSize"
-            android:minHeight="?attr/actionBarSize">
+            android:minHeight="?attr/actionBarSize"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -31,9 +31,9 @@
 
                 <ImageView
                     android:id="@+id/location_icon"
-                    android:padding="5dp"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:padding="5dp"
                     android:src="@drawable/ic_earth_globe" />
 
                 <LinearLayout
@@ -43,40 +43,99 @@
                     android:layout_toRightOf="@id/location_icon"
                     android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/location_title"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="location:"
-                    android:textAllCaps="true"
-                    android:textColor="@color/MainColorThree"
-                    android:textSize="13sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/location_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="location:"
+                        android:textAllCaps="true"
+                        android:textColor="@color/MainColorThree"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/location_city"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAllCaps="true"
-                    android:textColor="@color/MainColorThree"
-                    android:textSize="20sp"
-                    tools:text="London" />
-
+                    <TextView
+                        android:id="@+id/location_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="true"
+                        android:textColor="@color/MainColorThree"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        tools:text="London" />
                 </LinearLayout>
-
             </RelativeLayout>
-
-
-
         </android.support.v7.widget.Toolbar>
-
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:background="@color/MainColorThree">
+            android:background="@color/MainColorThree"
+            android:padding="10dp">
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/current_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="tuesday AUG 11"
+                    android:textAllCaps="true"
+                    android:textColor="@color/ColorAccentSeven"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/current_temperature"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/current_date"
+                    android:textColor="@color/ColorAccentSeven"
+                    android:textSize="40sp"
+                    tools:text="21°" />
+
+                <ImageView
+                    android:id="@+id/current_weather_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    tools:src="@drawable/ic_icicle" />
+
+                <TextView
+                    android:id="@+id/current_weather_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/White"
+                    android:textSize="12sp"
+                    tools:text="sunny, clear sky" />
+
+                <TextView
+                    android:id="@+id/current_humidity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/current_weather_description"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/White"
+                    android:textSize="12sp"
+                    tools:text="humidity: 78%" />
+
+                <TextView
+                    android:id="@+id/current_wind"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@id/current_humidity"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:textColor="@color/White"
+                    android:textSize="12sp"
+                    tools:text="wind: 23ᵐˢ" />
+            </RelativeLayout>
         </FrameLayout>
 
         <FrameLayout
@@ -93,9 +152,19 @@
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             </android.support.v7.widget.RecyclerView>
-
-
         </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/last_updated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ColorAccentSeven"
+            android:padding="5dp"
+            android:text="Last Updated: January 15 2017"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_collapseMode="parallax"
+            app:layout_scrollFlags="scroll" />
 
 
         <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -106,6 +175,7 @@
             android:layout_weight="3"
             android:background="@color/ColorAccentOne">
 
+
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recycler_view"
                 android:layout_width="match_parent"
@@ -115,15 +185,14 @@
 
             </android.support.v7.widget.RecyclerView>
 
+
             <TextView
                 android:id="@+id/volley_error"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:visibility="gone" />
-
         </android.support.v4.widget.SwipeRefreshLayout>
-
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
 
